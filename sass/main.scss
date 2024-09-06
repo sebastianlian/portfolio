@@ -1,0 +1,24 @@
+// custom variables
+$primary: #c29938;
+
+// import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Remove underline from links
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none; // Ensures no underline on hover
+}
+
+// Navbar link styles
+.navbar-nav .nav-link {
+  color: $primary; // Set the link color
+  text-decoration: none; // Remove underline if desired
+}
+
+.navbar-nav .nav-link:hover {
+  color: darken($primary, 10%); // Darker shade on hover (adjust as needed)
+}
