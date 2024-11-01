@@ -391,7 +391,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
-            emailjs.init("pxHo_ehTqbLaqN-1p"); // Replace "YOUR_USER_ID" with your EmailJS User ID
+            emailjs.init("EMAILJS_USER_ID"); // Replace "YOUR_USER_ID" with your EmailJS User ID
         })();
     </script>
 
@@ -474,12 +474,19 @@
 
             try {
                 // Send the email with EmailJS
-                const response = await emailjs.send("service_yjycxgo", "template_35wmuha", {
-                    email: email,
-                    name: name,
-                    subject: subject,
-                    message: message
+                const response = await efetch('http://localhost:3001/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        subject: subject,
+                        message: message,
+                    }),
                 });
+
 
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Your message has been sent successfully!');
