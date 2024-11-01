@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({ origin: 'https://sebastianlian.github.io' }));
+app.use(cors({ origin: 'https://sebastianlian.github.io/BootstrapResume/' }));
 app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
