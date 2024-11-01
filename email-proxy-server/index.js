@@ -12,7 +12,10 @@ app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
+    console.log("Received request:", req.body); // Debugging line
+
     const { SERVICE_ID, TEMPLATE_ID, USER_ID } = process.env;
+    console.log("Environment Variables:", { SERVICE_ID, TEMPLATE_ID, USER_ID }); // Debugging line
 
     try {
         const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
@@ -28,7 +31,7 @@ app.post('/send-email', async (req, res) => {
         });
         res.status(200).send('Email sent successfully');
     } catch (error) {
-        console.error('Error sending email:', error);
+        console.error('Error sending email:', error.response?.data || error.message);
         res.status(500).send('Email sending failed');
     }
 });
