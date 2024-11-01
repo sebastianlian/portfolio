@@ -83,8 +83,18 @@
                         <div class="display-5 text-muted">Software Developer</div>
                     </h1>
                     <p class="lead my-4 text-muted">I'm fueled by a curiosity for continuous learning and excited about the endless possibilities that technology offers.</p>
-                    <a href="https://github.com/sebastianlian" class="btn btn-primary btn-lg btn-block">GitHub</a>
-                    <a href="https://www.linkedin.com/in/sebastiancarmagnola/" class="btn btn-primary btn-lg btn-block">LinkedIn</a>
+                        <div>
+                            <!-- LinkedIn Icon -->
+                            <a href="https://www.linkedin.com/in/sebastiancarmagnola/" target="_blank" class="text-dark" style="text-decoration: none;">
+                                <i class="bi bi-linkedin" style="font-size: 2rem; color: #0077b5;"></i> <!-- LinkedIn Icon from Bootstrap Icons -->
+                                <span class="visually-hidden">LinkedIn</span> <!-- Accessible text for screen readers -->
+                            </a>
+                            <!-- GitHub Icon -->
+                            <a href="https://github.com/sebastianlian" target="_blank" class="text-dark mx-2" style="text-decoration: none;">
+                                <i class="bi bi-github" style="font-size: 2rem; color: #333;"></i>
+                                <span class="visually-hidden">GitHub</span>
+                            </a>
+                        </div>
                 </div>
                 <div class="col-md-5 text-center d-none d-md-block">
                     <!-- tooltip -->
@@ -152,9 +162,9 @@
             </div>
 
             <div class="row my-5 g-5 justify-content-around align-items-center">
-                <div class="col-6 col-lg-4">
-                    <img class="img-fluid rounded" src="./assets/code.png" alt="code">
-                </div>
+<!--                <div class="col-6 col-lg-4">-->
+<!--                    <img class="img-fluid rounded" src="./assets/code.png" alt="code">-->
+<!--                </div>-->
 
                 <div class="col-lg-6">
                 <!-- accordion -->
@@ -388,101 +398,106 @@
         </div>
     </section>
 
-    <!-- Include EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("EMAILJS_USER_ID"); // Replace "YOUR_USER_ID" with your EmailJS User ID
-        })();
-    </script>
+<!--    &lt;!&ndash; Include EmailJS SDK &ndash;&gt;-->
+<!--    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
+<!--    <script type="text/javascript">-->
+<!--        (function() {-->
+<!--            emailjs.init("EMAILJS_USER_ID"); // Replace "YOUR_USER_ID" with your EmailJS User ID-->
+<!--        })();-->
+<!--    </script>-->
 
-    <!-- contact form -->
+<!--    &lt;!&ndash; contact form &ndash;&gt;-->
+<!--    <section id="contact">-->
+<!--        <div class="container-lg">-->
+<!--            <div class="text-center">-->
+<!--                <h1>Get in Touch</h1>-->
+<!--                <p class="lead">Let's connect and chat about all things tech — I'm always up for an engaging conversation!</p>-->
+<!--            </div>-->
+<!---->
+<!--            &lt;!&ndash; grid form &ndash;&gt;-->
+<!--            <div class="row justify-content-center my-5">-->
+<!--                <div class="col-lg-6">-->
+<!--                    <form id="contact-form">-->
+<!--                        <label for="email" class="form-label">Email address:</label>-->
+<!--                        <div class="mb-4 input-group">-->
+<!--                            <span class="input-group-text">-->
+<!--                                <i class="bi bi-envelope-fill"></i>-->
+<!--                            </span>-->
+<!--                            <input type="email" class="form-control" id="email" placeholder="e.g. example@example.com">-->
+<!--                            &lt;!&ndash; tt &ndash;&gt;-->
+<!--                            <span class="input-group-text">-->
+<!--                                <span class="tt" data-bs-placement="bottom" title="Enter an email address I can reply to">-->
+<!--                                    <i class="bi bi-question-circle text-muted"></i>-->
+<!--                                </span>-->
+<!--                            </span>-->
+<!--                        </div>-->
+
+<!--                        <label for="name" class="form-label">Name:</label>-->
+<!--                        <div class="mb-4 input-group">-->
+<!--                            <span class="input-group-text">-->
+<!--                                <i class="bi bi-person-fill"></i>-->
+<!--                            </span>-->
+<!--                            <input type="text" class="form-control" id="name" placeholder="e.g. John Doe">-->
+<!--                            &lt;!&ndash; tt &ndash;&gt;-->
+
+<!--                        </div>-->
+
+<!--                        <label for="subject" class="form-label">What do you want to discuss?</label>-->
+<!--                        <div class="mb-4 input-group mb-4">-->
+<!--                            <span class="input-group-text">-->
+<!--                                <i class="bi bi-chat-right-dots-fill"></i>-->
+<!--                            </span>-->
+<!--                            <select class="form-select" id="subject">-->
+<!--                                <option value="freelancing">Freelancing</option>-->
+<!--                                <option value="hiring">Hiring</option>-->
+<!--                                <option value="other">Other</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+
+
+<!--                        <div class="form-floating mb-4 mt-5">-->
+<!--                            <textarea id="query" class="form-control" style="height: 140px"></textarea>-->
+<!--                            <label for="query">Your message...</label>-->
+<!--                        </div>-->
+
+<!--                        <div id="alert-container"></div> &lt;!&ndash; container for the alert &ndash;&gt;-->
+<!--                        <div class="mb-0 text-center">-->
+<!--                            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </section>-->
+
+    <!-- Contact Me -->
     <section id="contact">
         <div class="container-lg">
             <div class="text-center">
                 <h1>Get in Touch</h1>
                 <p class="lead">Let's connect and chat about all things tech — I'm always up for an engaging conversation!</p>
-            </div>
 
-            <!-- grid form -->
-            <div class="row justify-content-center my-5">
-                <div class="col-lg-6">
-                    <form id="contact-form">
-                        <label for="email" class="form-label">Email address:</label>
-                        <div class="mb-4 input-group">
-                            <span class="input-group-text">
-                                <i class="bi bi-envelope-fill"></i>
-                            </span>
-                            <input type="email" class="form-control" id="email" placeholder="e.g. example@example.com">
-                            <!-- tt -->
-                            <span class="input-group-text">
-                                <span class="tt" data-bs-placement="bottom" title="Enter an email address I can reply to">
-                                    <i class="bi bi-question-circle text-muted"></i>
-                                </span>
-                            </span>
-                        </div>
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/sebastiancarmagnola/" target="_blank" class="text-dark" style="text-decoration: none;">
+                    <i class="bi bi-linkedin" style="font-size: 2rem; color: #0077b5;"></i> <!-- LinkedIn Icon from Bootstrap Icons -->
+                    <span class="visually-hidden">LinkedIn</span> <!-- Accessible text for screen readers -->
+                </a>
 
-                        <label for="name" class="form-label">Name:</label>
-                        <div class="mb-4 input-group">
-                            <span class="input-group-text">
-                                <i class="bi bi-person-fill"></i>
-                            </span>
-                            <input type="text" class="form-control" id="name" placeholder="e.g. John Doe">
-                            <!-- tt -->
-
-                        </div>
-
-                        <label for="subject" class="form-label">What do you want to discuss?</label>
-                        <div class="mb-4 input-group mb-4">
-                            <span class="input-group-text">
-                                <i class="bi bi-chat-right-dots-fill"></i>
-                            </span>
-                            <select class="form-select" id="subject">
-                                <option value="freelancing">Freelancing</option>
-                                <option value="hiring">Hiring</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-
-                        <div class="form-floating mb-4 mt-5">
-                            <textarea id="query" class="form-control" style="height: 140px"></textarea>
-                            <label for="query">Your message...</label>
-                        </div>
-
-                        <div id="alert-container"></div> <!-- container for the alert -->
-                        <div class="mb-0 text-center">
-                            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                <!-- GitHub Icon -->
+                <a href="https://github.com/sebastianlian" target="_blank" class="text-dark mx-2" style="text-decoration: none;">
+                    <i class="bi bi-github" style="font-size: 2rem; color: #333;"></i>
+                    <span class="visually-hidden">GitHub</span>
+                </a>
 
             </div>
-
         </div>
     </section>
 
-    <script type="text/javascript">
-        document.getElementById("submitButton").addEventListener("click", function () {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('query').value;
+    <!-- Include Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                from_name: name,
-                from_email: email,
-                subject: subject,
-                message: message,
-            }).then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Your message has been sent successfully!');
-            }, function(error) {
-                console.error('FAILED...', error);
-                alert('Failed to send your message. Please try again later.');
-            });
-        });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
