@@ -14,14 +14,14 @@ app.post('/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
     console.log("Received request:", req.body); // Debugging line
 
-    const { SERVICE_ID, TEMPLATE_ID, USER_ID } = process.env;
-    console.log("Environment Variables:", { SERVICE_ID, TEMPLATE_ID, USER_ID }); // Debugging line
+    const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = process.env;
+    // console.log("Environment Variables:", { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID }); // Debugging line
 
     try {
         const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', {
-            service_id: SERVICE_ID,
-            template_id: TEMPLATE_ID,
-            user_id: USER_ID,
+            service_id: EMAILJS_SERVICE_ID,
+            template_id: EMAILJS_TEMPLATE_ID,
+            user_id: EMAILJS_USER_ID,
             template_params: {
                 from_name: name,
                 from_email: email,
