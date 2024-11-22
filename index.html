@@ -31,6 +31,36 @@
             height: 100%;
             object-fit: cover; /* Ensure video covers the container */
         }
+        .carousel-caption {
+            position: static;
+            margin-top: 10px; /* Add spacing below the image */
+            background-color: transparent; /* Remove background */
+            color: black;
+        }
+        .carousel-indicators [data-bs-target] {
+            background-color: #5c636a; /* Change to your desired color */
+        }
+        .carousel-indicators .active {
+            background-color: #4caf50; /* Change the active indicator color */
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px; /* Or your desired height */
+            object-fit: contain; /* Ensures the image fits without distortion */
+            /*background-color: #f8f9fa; !* Optional: background color for empty space *!*/
+        }
+        .img-wrapper {
+            width: 100%; /* Match the carousel width */
+            height: 400px; /* Fixed height for all images */
+            overflow: hidden; /* Hide any overflow */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-wrapper img {
+            width: auto; /* Let the width adjust */
+            height: 100%; /* Force the height to match the wrapper */
+        }
     </style>
 </head>
 <body>
@@ -99,7 +129,7 @@
                 <div class="col-md-5 text-center d-none d-md-block">
                     <!-- tooltip -->
                     <span class="tt" data-bs-placement="bottom" title="Sebastian's Headshot">
-                        <img src="./assets/sebastian.JPG" class="img-fluid rounded-2" alt="sebastian">
+                        <img src="assets/Images/sebastian.JPG" class="img-fluid rounded-2" alt="sebastian">
                     </span>
                 </div>
             </div>
@@ -164,9 +194,9 @@
                     illustrating my ability to develop functional, user-focused applications and systems.</p>
             </div>
 
-            <div class="row my-5 g-5 justify-content-around align-items-center">
-                <div class="col-6 col-lg-4">
-                    <img class="img-fluid rounded" src="./assets/depiction.webp" alt="depiction">
+            <div class="row my-3 g-3 justify-content-around align-items-center">
+                <div class="col-6 col-lg-5">
+                    <img class="img-fluid rounded" src="assets/Images/depiction.webp" alt="depiction">
                 </div>
 
                 <div class="col-lg-6">
@@ -268,7 +298,7 @@
                                     <!-- modal pop-up -->
                                     <div class="row justify-content-center">
                                         <div class="col-md-8 text-center">
-                                            <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#reg-modal">Preview</button>
+                                            <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#first-modal">Preview Video</button>
                                         </div>
                                     </div>
                                     <div class="progress">
@@ -318,6 +348,146 @@
                                         which enhanced bot responsiveness. Optimized backend operations using Node.js and Express.js
                                         for efficient server communication and seamless interaction, contributing to a robust
                                         administration toolkit for server admins.</p>
+<!--                                    <div id="carouselExampleCaptions" class="carousel slide">-->
+<!--                                        <div class="carousel-indicators">-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>-->
+<!--                                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>-->
+<!--                                        </div>-->
+<!--                                        <div class="carousel-inner">-->
+<!--                                            <div class="carousel-item active">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/Login.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Login Portal</h5>-->
+<!--                                                    <p>Some representative placeholder content for the first slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/WelcomePage.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Welcome Landing Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the second slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/Hamburger.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Hamburger Menu</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/Sidebar.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Sidebar Command Expansion</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/UserActivity.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>User Activity Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/Inactivity.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Inactivity Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/Purge.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Purge Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/Blacklist.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Blacklist Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/BlacklistAdd.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Adding User to Blacklist</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/UserRoles.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Roles & Timers Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/FAQ.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>FAQ Page</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="carousel-item">-->
+<!--                                                <div class="img-wrapper">-->
+<!--                                                    <img src="./assets/DiscordBot/FAQ%20Expanded.png" class="d-block w-100" alt="...">-->
+<!--                                                </div>-->
+<!--                                                <div class="carousel-caption d-none d-md-block">-->
+<!--                                                    <h5>Expanded Accordions</h5>-->
+<!--                                                    <p>Some representative placeholder content for the third slide.</p>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">-->
+<!--                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                                            <span class="visually-hidden">Previous</span>-->
+<!--                                        </button>-->
+<!--                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">-->
+<!--                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                                            <span class="visually-hidden">Next</span>-->
+<!--                                        </button>-->
+<!--                                    </div>-->
+                                    <!-- modal pop-up -->
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-8 text-center">
+                                            <button class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#second-modal">Preview Video</button>
+                                        </div>
+                                    </div>
                                     <div class="progress">
                                         <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
                                     </div>
@@ -326,28 +496,6 @@
                         </div>
 
                         <!-- project 8-->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading-8">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-8" aria-expanded="true" aria-controls="project-8">
-                                    Personal Bootstrap Portfolio | JavaScript, HTML, CSS
-                                </button>
-                            </h2>
-                            <div id="project-8" class="accordion-collapse collapse show"
-                                 aria-labelledby="project-8" data-bs-parent="#individual-projects">
-                                <div class="accordion-body">
-                                    <p>Developed a responsive portfolio website using Bootstrap to showcase my resume,
-                                        GitHub, LinkedIn, coding projects, and technical skills. The site offers a streamlined
-                                        interface for accessing professional profiles and detailed project information.
-                                        It highlights my experience and abilities, providing an organized presentation of
-                                        my work and credentials.</p>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- project 9-->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-9">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-9" aria-expanded="true" aria-controls="project-9">
@@ -367,7 +515,7 @@
                             </div>
                         </div>
 
-                        <!-- project 10-->
+                        <!-- project 9-->
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-10">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-10" aria-expanded="true" aria-controls="project-10">
@@ -388,7 +536,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -535,8 +682,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
-    <!-- modal itself -->
-    <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <!-- first modal -->
+    <div class="modal fade" id="first-modal" tabindex="-1" aria-labelledby="modal-title-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -546,7 +693,26 @@
                 <div class="modal-body d-flex justify-content-center align-items-center">
                     <div class="video-container">
                         <video class="w-100" controls>
-                            <source src="./assets/coffee_shop.mp4"/>
+                            <source src="assets/CoffeeShop/coffee_shop.mp4"/>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- second modal -->
+    <div class="modal fade" id="second-modal" tabindex="-1" aria-labelledby="modal-title-2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title-2">Automated Discord Bot Website Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <div class="video-container">
+                        <video class="w-100" controls>
+                            <source src="./assets/DiscordBot/Discord%20Bot%20Showcase%20Recording.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
