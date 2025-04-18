@@ -98,9 +98,11 @@
             display: inline-block;
             vertical-align: middle;
         }
-        .chart-container {
-            height: 350px; /* adjust based on breakpoint */
+        .chart-container canvas {
+            max-width: 100%;
+            height: auto;
         }
+
         @media (max-width: 576px) {
             .chart-container {
                 height: 300px;
@@ -341,13 +343,20 @@
                     <hr class="my-5">
 
                     <!-- Radar Chart -->
-                    <div class="text-center">
-                        <h4 class="fw-bold mb-1 lead">Technical Strength Snapshot</h4>
-                        <small class="text-muted d-block mb-4">Self-assessed technical proficiency across key development domains</small>
-                        <div class="chart-container" style="position: relative; width: 100%; max-width: 500px; margin: auto;">
-                            <canvas id="skillsRadarChart"></canvas>
+                    <!-- Radar Chart -->
+                    <div class="card border-opacity-75 border-1">
+                        <div class="card-body">
+                            <div class="text-center mt-5">
+                                <h4 class="fw-bold mb-1 lead">Technical Strength Snapshot</h4>
+                                <small class="text-muted d-block mb-4">Self-assessed technical proficiency across key development domains</small>
+
+                                <div class="chart-container" style="position: relative; width: 100%; max-width: 500px; height: 350px; margin: auto;">
+                                    <canvas id="skillsRadarChart"></canvas>
+                                </div>
+
+                                <small class="text-muted fst-italic d-block mt-3">Scores reflect proficiency out of 10, based on self-assessment</small>
+                            </div>
                         </div>
-                        <small class="text-muted fst-italic">Scores reflect proficiency out of 10, based on self-assessment</small>
                     </div>
                 </div>
             </div>
@@ -1003,12 +1012,12 @@
                     'Machine Learning',
                     'Backend/API Dev',
                     'Database Design',
-                    'Prompt Engineering',
-                    'Version Control & Tools'
+                    'AI Integration',
+                    'Version Control'
                 ],
                 datasets: [{
                     label: 'Skill Level (1–10)',
-                    data: [9, 4, 8, 8, 5, 8],
+                    data: [9, 6, 8, 8, 7, 7],
                     fill: true,
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
@@ -1026,12 +1035,20 @@
                         suggestedMin: 0,
                         suggestedMax: 10,
                         ticks: {
-                            stepSize: 1
+                            stepSize: 1,
+                            backdropColor: 'transparent'
                         },
                         pointLabels: {
                             font: {
-                                size: 14
-                            }
+                                size: window.innerWidth < 576 ? 10 : 14
+                            },
+                            color: '#444'
+                        },
+                        angleLines: {
+                            color: '#ccc'
+                        },
+                        grid: {
+                            color: '#ddd'
                         }
                     }
                 },
@@ -1043,6 +1060,7 @@
             }
         });
     </script>
+
 
     <!-- footer section -->
     <section class="bg-light">
