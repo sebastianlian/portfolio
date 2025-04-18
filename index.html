@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./sass/main.css">
     <style>
         section {
-            padding: 60px 0;
+            padding: 40px 0;
         }
         .modal-body {
             position: relative;
@@ -86,6 +86,20 @@
         }
         .badge.bg-black {
             background-color: #000 !important; /* ML/DS */
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -238,36 +252,82 @@
                             <div class="list-group list-group-flush">
                                 <!-- languages -->
                                 <div class="list-group-item py-h3">
-                                    <h5 class="mb-1">Programming Languages & Frameworks</h5>
-                                    <p class="mb-1">React.js | JavaScript | Node.js | Express.js | SQL | Python | Flask | Java | HTML/CSS | PHP | Bash</p>
+                                    <h5 class="mb-1 lead">Programming Languages & Frameworks</h5>
+                                    <img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React.js">
+                                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+                                    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+                                    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
+                                    <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL">
+                                    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                                    <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+                                    <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+                                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                                    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+                                    <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash">
                                 </div>
 
                                 <!--ML -->
                                 <div class="list-group-item py-h3">
-                                    <h5 class="mb-1">Machine Learning</h5>
-                                    <p class="mb-1">Scikit-learn | Pandas | NumPy | Chart.js | Feature Engineering | Model Optimization & Training</p>
+                                    <h5 class="mb-1 lead">Machine Learning</h5>
+                                    <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit-learn">
+                                    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+                                    <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+                                    <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js">
                                 </div>
 
                                 <!--db & apis -->
                                 <div class="list-group-item py-h3">
-                                    <h5 class="mb-1">Database & APIs</h5>
-                                    <p class="mb-1">MongoDB | MySQL | Firebase | Google Cloud APIs | Anthropic SDK AI | RESTful APIs</p>
+                                    <h5 class="mb-1 lead">Database & APIs</h5>
+                                    <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+                                    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                                    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
+                                    <img src="https://img.shields.io/badge/Google_Cloud_APIs-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud APIs">
+                                    <img src="https://img.shields.io/badge/Anthropic-000000?style=for-the-badge&logoColor=white" alt="Anthropic API">
+                                    <img src="https://img.shields.io/badge/REST_API-005571?style=for-the-badge&logo=api&logoColor=white" alt="RESTful APIs">
                                 </div>
 
                                 <!--tools -->
                                 <div class="list-group-item py-h3">
-                                    <h5 class="mb-1">Tools</h5>
-                                    <p class="mb-1">Git | JIRA | Postman | Jest | Selenium | Junit | SQL Developer | Mongo Modeler | Trello</p>
+                                    <h5 class="mb-1 lead">Tools</h5>
+                                    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                                    <img src="https://img.shields.io/badge/JIRA-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira">
+                                    <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+                                    <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest">
+                                    <img src="https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white" alt="Selenium">
+                                    <img src="https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit">
+                                    <img src="https://img.shields.io/badge/SQL_Developer-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="SQL Developer">
+                                    <img src="https://img.shields.io/badge/MongoDB_Modeler-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white" alt="Mongo Modeler">
+                                    <img src="https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white" alt="Trello">
                                 </div>
 
                                 <!--core competencies -->
                                 <div class="list-group-item py-h3">
-                                    <h5 class="mb-1">Core Competencies</h5>
-                                    <p class="mb-1">Full-Stack Development | Version Control | Agile Methodologies |Authentication (Oauth2, JWT)</p>
+                                    <h5 class="mb-1 lead">Core Competencies</h5>
+                                    <span class="badge bg-primary rounded-pill">Full-Stack Development</span>
+                                    <span class="badge bg-success rounded-pill">Agile</span>
+                                    <span class="badge bg-dark rounded-pill">Version Control</span>
+                                    <span class="badge bg-warning text-dark rounded-pill">System Design</span>
+                                    <span class="badge bg-info text-dark rounded-pill">Authentication (OAuth2, JWT)</span>
+                                    <span class="badge bg-secondary rounded-pill">Database Design</span>
+                                    <span class="badge rounded-pill bg-warning text-dark">Feature Engineering</span>
+                                    <span class="badge rounded-pill bg-info text-dark">Model Optimization & Training</span>
+                                    <span class="badge rounded-pill bg-dark">Prompt Engineering</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+<!--                    &lt;!&ndash; Chart Divider &ndash;&gt;-->
+<!--                    <hr class="my-5">-->
+
+<!--                    &lt;!&ndash; Radar Chart &ndash;&gt;-->
+<!--                    <div class="text-center">-->
+<!--                        <h4 class="fw-bold mb-1 lead">Technical Strength Snapshot</h4>-->
+<!--                        <small class="text-muted d-block mb-4">Self-assessed technical proficiency across key development domains</small>-->
+<!--                        <canvas id="skillsRadarChart" width="400" height="400" style="max-width: 100%;"></canvas>-->
+<!--                        <small class="text-muted fst-italic">Scores reflect proficiency out of 10, based on self-assessment</small>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -354,7 +414,7 @@
 
     <!-- projects -->
     <section id="projects">
-        <div class="container-md">
+        <div class="container-lg">
             <div class="text-center">
                 <h1>Projects</h1>
                 <p class="lead text-muted">A diverse collection of projects demonstrating my expertise in software
@@ -691,7 +751,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading-11">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-11" aria-expanded="true" aria-controls="project-11">
-                                    Predictive Oncology Insights | Python, Flask, Scikit-learn
+                                    Predictive Oncology Insights
                                     <small class="ms-3 text-muted">(Spring 2025)</small>
                                 </button>
                             </h2>
@@ -909,6 +969,56 @@
         });
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+        const radarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: [
+                    'Full-Stack Development',
+                    'Machine Learning',
+                    'Backend/API Dev',
+                    'Database Design',
+                    'Prompt Engineering',
+                    'Version Control & Tools'
+                ],
+                datasets: [{
+                    label: 'Skill Level (1–10)',
+                    data: [9, 7, 8, 8, 6, 9],
+                    fill: true,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        ticks: {
+                            stepSize: 1
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
 
     <!-- footer section -->
     <section class="bg-light">
@@ -934,13 +1044,6 @@
         </div>
     </section>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
 </body>
 </html>
