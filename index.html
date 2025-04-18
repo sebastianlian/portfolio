@@ -98,8 +98,14 @@
             display: inline-block;
             vertical-align: middle;
         }
-
-
+        .chart-container {
+            height: 350px; /* adjust based on breakpoint */
+        }
+        @media (max-width: 576px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -316,7 +322,7 @@
                                     <h5 class="mb-1 lead">Core Competencies</h5>
                                     <div class="d-flex flex-wrap gap-2">
                                         <span class="badge rounded-pill bg-primary chip">Full Stack Development</span>
-                                        <span class="badge rounded-pill bg-success chip">Agile</span>
+                                        <span class="badge rounded-pill bg-success chip">Agile Methodologies</span>
                                         <span class="badge rounded-pill bg-dark chip">Version Control</span>
                                         <span class="badge rounded-pill bg-warning text-dark chip">System Design</span>
                                         <span class="badge rounded-pill bg-info text-dark chip">Authentication (OAuth2, JWT)</span>
@@ -338,7 +344,9 @@
                     <div class="text-center">
                         <h4 class="fw-bold mb-1 lead">Technical Strength Snapshot</h4>
                         <small class="text-muted d-block mb-4">Self-assessed technical proficiency across key development domains</small>
-                        <canvas id="skillsRadarChart" width="400" height="400" style="max-width: 100%;"></canvas>
+                        <div class="chart-container" style="position: relative; width: 100%; max-width: 500px; margin: auto;">
+                            <canvas id="skillsRadarChart"></canvas>
+                        </div>
                         <small class="text-muted fst-italic">Scores reflect proficiency out of 10, based on self-assessment</small>
                     </div>
                 </div>
@@ -467,7 +475,7 @@
 
                                     <!-- SKILL CHIPS -->
                                     <div class="mt-3 d-flex flex-wrap gap-2">
-                                        <span class="badge rounded-pill bg-success chip">Waterfall</span>
+                                        <span class="badge rounded-pill bg-success chip">Waterfall Methodologies</span>
                                         <span class="badge rounded-pill bg-info text-dark chip">Object-Oriented Design</span>
                                         <span class="badge rounded-pill bg-secondary chip">File I/O</span>
                                     </div>
@@ -502,7 +510,7 @@
 
                                     <!-- SKILL CHIPS -->
                                     <div class="mt-3 d-flex flex-wrap gap-2">
-                                        <span class="badge rounded-pill bg-success chip">Waterfall</span>
+                                        <span class="badge rounded-pill bg-success chip">Waterfall Methodologies</span>
                                         <span class="badge rounded-pill bg-info text-dark chip">Object-Oriented Design</span>
                                         <span class="badge rounded-pill bg-secondary chip">File I/O</span>
                                     </div>
@@ -539,7 +547,7 @@
 
                                     <!-- SKILL CHIPS -->
                                     <div class="mt-3 d-flex flex-wrap gap-2">
-                                        <span class="badge rounded-pill bg-secondary chip">ER Diagrams</span>
+                                        <span class="badge rounded-pill bg-secondary chip">Database Design</span>
                                         <span class="badge rounded-pill bg-warning text-dark chip">Test Queries</span>
                                     </div>
 
@@ -621,6 +629,7 @@
                                     <div class="mt-3 d-flex flex-wrap gap-2">
                                         <span class="badge rounded-pill bg-primary chip">Full Stack Development</span>
                                         <span class="badge rounded-pill bg-danger chip">UI/UX</span>
+                                        <span class="badge rounded-pill bg-secondary chip">Database Design</span>
                                     </div>
 
                                     <div class="progress mt-4">
@@ -701,10 +710,11 @@
                                     <!-- SKILL CHIPS -->
                                     <div class="mt-3 d-flex flex-wrap gap-2">
                                         <span class="badge rounded-pill bg-primary chip">Full Stack Development</span>
-                                        <span class="badge rounded-pill bg-success chip">Agile</span>
+                                        <span class="badge rounded-pill bg-secondary chip">Database Design</span>
+                                        <span class="badge rounded-pill bg-success chip">Agile Methodologies</span>
                                         <span class="badge rounded-pill bg-dark chip">Jira</span>
                                         <span class="badge rounded-pill bg-info text-dark chip">Git</span>
-                                        <span class="badge rounded-pill bg-secondary chip">OAuth2</span>
+                                        <span class="badge rounded-pill bg-info text-dark chip">Authentication (OAuth2, JWT)</span>
                                     </div>
 
                                     <div class="progress mt-4">
@@ -746,11 +756,13 @@
                                     <!-- SKILL CHIPS -->
                                     <div class="mt-3 d-flex flex-wrap gap-2">
                                         <span class="badge rounded-pill bg-primary chip">Full Stack Development</span>
-                                        <span class="badge rounded-pill bg-success chip">Agile</span>
+                                        <span class="badge rounded-pill bg-success chip">Agile Methodologies</span>
                                         <span class="badge rounded-pill bg-dark chip">Jira</span>
                                         <span class="badge rounded-pill bg-info text-dark chip">Git</span>
                                         <span class="badge rounded-pill bg-warning text-dark chip">AI Integration</span>
                                         <span class="badge rounded-pill bg-black chip">Machine Learning</span>
+                                        <span class="badge rounded-pill bg-secondary chip">Database Design</span>
+                                        <span class="badge rounded-pill bg-info text-dark chip">Model Optimization & Training</span>
                                     </div>
 
                                     <div class="progress mt-4">
@@ -788,8 +800,7 @@
                                     <!-- SKILL CHIPS -->
                                     <div class="mt-3 d-flex flex-wrap gap-2">
                                         <span class="badge rounded-pill bg-primary chip">Full Stack Development</span>
-                                        <span class="badge rounded-pill bg-success chip">Agile</span>
-                                        <span class="badge rounded-pill bg-info text-dark chip">Git</span>
+                                        <span class="badge rounded-pill bg-warning text-dark chip">Feature Engineering</span>
                                         <span class="badge rounded-pill bg-black chip">Machine Learning</span>
                                     </div>
 
@@ -997,7 +1008,7 @@
                 ],
                 datasets: [{
                     label: 'Skill Level (1–10)',
-                    data: [9, 7, 8, 8, 6, 9],
+                    data: [9, 4, 8, 8, 5, 8],
                     fill: true,
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)',
@@ -1009,6 +1020,7 @@
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     r: {
                         suggestedMin: 0,
