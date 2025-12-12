@@ -816,6 +816,9 @@
                                     <!-- TECH STACK -->
                                     <div class="mb-3">
                                         <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                                        <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+                                        <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+                                        <img src="https://img.shields.io/badge/-Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white&logoSize=2" alt="Matplotlib">
                                     </div>
 
                                     <p>Built and compared rule-based and machine-learning algorithmic trading strategies
@@ -844,80 +847,6 @@
             </div>
         </div>
     </section>
-
-    <!--    &lt;!&ndash; Include EmailJS SDK &ndash;&gt;-->
-<!--    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>-->
-<!--    <script type="text/javascript">-->
-<!--        (function() {-->
-<!--            emailjs.init("EMAILJS_USER_ID"); // Replace "YOUR_USER_ID" with your EmailJS User ID-->
-<!--        })();-->
-<!--    </script>-->
-
-<!--    &lt;!&ndash; contact form &ndash;&gt;-->
-<!--    <section id="contact">-->
-<!--        <div class="container-lg">-->
-<!--            <div class="text-center">-->
-<!--                <h1>Get in Touch</h1>-->
-<!--                <p class="lead">Let's connect and chat about all things tech — I'm always up for an engaging conversation!</p>-->
-<!--            </div>-->
-<!---->
-<!--            &lt;!&ndash; grid form &ndash;&gt;-->
-<!--            <div class="row justify-content-center my-5">-->
-<!--                <div class="col-lg-6">-->
-<!--                    <form id="contact-form">-->
-<!--                        <label for="email" class="form-label">Email address:</label>-->
-<!--                        <div class="mb-4 input-group">-->
-<!--                            <span class="input-group-text">-->
-<!--                                <i class="bi bi-envelope-fill"></i>-->
-<!--                            </span>-->
-<!--                            <input type="email" class="form-control" id="email" placeholder="e.g. example@example.com">-->
-<!--                            &lt;!&ndash; tt &ndash;&gt;-->
-<!--                            <span class="input-group-text">-->
-<!--                                <span class="tt" data-bs-placement="bottom" title="Enter an email address I can reply to">-->
-<!--                                    <i class="bi bi-question-circle text-muted"></i>-->
-<!--                                </span>-->
-<!--                            </span>-->
-<!--                        </div>-->
-
-<!--                        <label for="name" class="form-label">Name:</label>-->
-<!--                        <div class="mb-4 input-group">-->
-<!--                            <span class="input-group-text">-->
-<!--                                <i class="bi bi-person-fill"></i>-->
-<!--                            </span>-->
-<!--                            <input type="text" class="form-control" id="name" placeholder="e.g. John Doe">-->
-<!--                            &lt;!&ndash; tt &ndash;&gt;-->
-
-<!--                        </div>-->
-
-<!--                        <label for="subject" class="form-label">What do you want to discuss?</label>-->
-<!--                        <div class="mb-4 input-group mb-4">-->
-<!--                            <span class="input-group-text">-->
-<!--                                <i class="bi bi-chat-right-dots-fill"></i>-->
-<!--                            </span>-->
-<!--                            <select class="form-select" id="subject">-->
-<!--                                <option value="freelancing">Freelancing</option>-->
-<!--                                <option value="hiring">Hiring</option>-->
-<!--                                <option value="other">Other</option>-->
-<!--                            </select>-->
-<!--                        </div>-->
-
-
-<!--                        <div class="form-floating mb-4 mt-5">-->
-<!--                            <textarea id="query" class="form-control" style="height: 140px"></textarea>-->
-<!--                            <label for="query">Your message...</label>-->
-<!--                        </div>-->
-
-<!--                        <div id="alert-container"></div> &lt;!&ndash; container for the alert &ndash;&gt;-->
-<!--                        <div class="mb-0 text-center">-->
-<!--                            <button type="button" class="btn btn-primary" id="submitButton">Submit</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
-
-<!--            </div>-->
-
-<!--        </div>-->
-<!--    </section>-->
 
     <!-- Contact Me -->
     <section id="contact" class="bg-light">
@@ -1019,67 +948,6 @@
             });
         });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('skillsRadarChart').getContext('2d');
-        const radarChart = new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: [
-                    'Full-Stack Development',
-                    'SDLC',
-                    'Backend/API Dev',
-                    'Database Design',
-                    'AI Integration',
-                    'Version Control'
-                ],
-                datasets: [{
-                    label: 'Skill Level (1–10)',
-                    data: [9, 10, 8, 8, 7, 7],
-                    fill: true,
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgba(54, 162, 235, 1)'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        suggestedMin: 0,
-                        suggestedMax: 10,
-                        ticks: {
-                            stepSize: 1,
-                            backdropColor: 'transparent'
-                        },
-                        pointLabels: {
-                            font: {
-                                size: window.innerWidth < 576 ? 10 : 14
-                            },
-                            color: '#444'
-                        },
-                        angleLines: {
-                            color: '#ccc'
-                        },
-                        grid: {
-                            color: '#ddd'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-    </script>
-
 
     <!-- footer section -->
     <section>
